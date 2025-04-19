@@ -19,16 +19,26 @@ namespace PresentationLayer
         {
             InitializeComponent();
         }
-
         private void btt_Table_Click(object sender, EventArgs e)
         {
-            btt_Table.BackColor = Color.Red;
+            Button btt = sender as Button;
+            int soBan = (int)btt.Tag;
+            btt.BackColor = Color.Red;
 
+            // Lay Table
             BanBL banBL = new BanBL();
-            Ban banChon = banBL.BanSo(1);
+            Ban banChon = banBL.BanSo(soBan);
 
-            txtTrangThai.Text = banChon.Status.ToString();
-            txtThoiGian.Text = banChon.Status.ToString();
+            if (banChon.Status == false)
+                txtTrangThai.Text = "Không Trống";
+            else
+                txtTrangThai.Text = "Trống";
+            txtThoiGian.Text = banChon.Datatime.ToString();
+
+            // Lay Order Detail
+            dgv_HoaDon.DataSource = new HoaDonBL().GetHoaDons(soBan);
+            
+            
 
         }
     }

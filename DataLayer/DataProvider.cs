@@ -15,7 +15,7 @@ namespace DataTranfer
 
         public DataProvider()
         {
-            string cnStr = "Data Source=LAPTOP-V0546IIT;Initial Catalog=CoffeShop;Integrated Security=True;Trust Server Certificate=True";
+            string cnStr = "Data Source=LAPTOP-V0546IIT;Initial Catalog=CoffeShop;Integrated Security=True";
             cn = new SqlConnection(cnStr);
         }
 

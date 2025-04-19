@@ -19,8 +19,6 @@ namespace BusinessLayer
 
         public Ban BanSo(int SoBan)
         {
-            try
-            {
                 try
                 {
                     List<Ban> danhSachBan = banDL.GetBans();
@@ -32,12 +30,6 @@ namespace BusinessLayer
 
                     throw ex;
                 }
-            }
-            catch (SqlException ex)
-            {
-
-                throw ex;
-            }
         }
     }
 }

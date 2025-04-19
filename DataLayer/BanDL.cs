@@ -13,7 +13,7 @@ namespace DataLayer
     {
         public List<Ban> GetBans()
         {
-            string sql = "SELECT * FROM TABLE";
+            string sql = "SELECT * FROM [Table]"; // Dung bang Table phai bo vao []
             int id;
             bool status;
             string datetime;

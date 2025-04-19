@@ -16,5 +16,11 @@ namespace PresentationLayer
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Table table = new Table();
+            table.ShowDialog();
+        }
     }
 }
