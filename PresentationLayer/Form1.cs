@@ -22,5 +22,11 @@ namespace PresentationLayer
             Table table = new Table();
             table.ShowDialog();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            WorkDay workDay = new WorkDay();
+            workDay.ShowDialog();
+        }
     }
 }

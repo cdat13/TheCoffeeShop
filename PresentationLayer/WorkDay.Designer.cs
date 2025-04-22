@@ -40,7 +40,6 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btt_Tao = new System.Windows.Forms.Button();
             this.comboBox_NhanVien = new System.Windows.Forms.ComboBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.label6 = new System.Windows.Forms.Label();
             this.dgv_NgayCong = new System.Windows.Forms.DataGridView();
@@ -54,7 +53,7 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 677);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 734);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
             // label2
@@ -197,14 +196,14 @@
             this.dgv_NgayCong.Name = "dgv_NgayCong";
             this.dgv_NgayCong.RowHeadersWidth = 51;
             this.dgv_NgayCong.RowTemplate.Height = 24;
-            this.dgv_NgayCong.Size = new System.Drawing.Size(1131, 412);
+            this.dgv_NgayCong.Size = new System.Drawing.Size(1135, 380);
             this.dgv_NgayCong.TabIndex = 10;
             // 
             // WorkDay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1371, 677);
+            this.ClientSize = new System.Drawing.Size(1372, 734);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.flowLayoutPanel4);
@@ -212,6 +211,7 @@
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "WorkDay";
             this.Text = "WorkDay";
+            this.Load += new System.EventHandler(this.WorkDay_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
@@ -235,7 +235,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Label label6;
