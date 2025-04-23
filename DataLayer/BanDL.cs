@@ -16,7 +16,7 @@ namespace DataLayer
             string sql = "SELECT * FROM [Table]"; // Dung bang Table phai bo vao []
             int id;
             bool status;
-            string datetime;
+            DateTime datetime;
             List<Ban> bans = new List<Ban>();
             try
             {
@@ -26,7 +26,7 @@ namespace DataLayer
                 {
                     id = (int)reader[0];
                     status = (bool)reader[1];
-                    datetime = reader[2].ToString();
+                    datetime = (DateTime)reader[2];
                     Ban ban = new Ban(id, status, datetime);
                     bans.Add(ban);
                 }

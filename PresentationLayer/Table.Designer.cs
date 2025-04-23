@@ -30,25 +30,23 @@
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.flpnl_Table = new System.Windows.Forms.FlowLayoutPanel();
-            this.btt_Table = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pnl_ThongTin = new System.Windows.Forms.Panel();
-            this.txtTrangThai = new System.Windows.Forms.TextBox();
-            this.txtThoiGian = new System.Windows.Forms.TextBox();
-            this.txtHoaDon = new System.Windows.Forms.TextBox();
+            this.text_HoaDon = new System.Windows.Forms.Label();
+            this.text_ThoiGian = new System.Windows.Forms.Label();
+            this.text_TrangThai = new System.Windows.Forms.Label();
             this.btt_ClearTable = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.dgv_HoaDon = new System.Windows.Forms.DataGridView();
-            this.label8 = new System.Windows.Forms.Label();
+            this.label = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.flpnl_Table.SuspendLayout();
             this.pnl_ThongTin.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_HoaDon)).BeginInit();
@@ -65,22 +63,10 @@
             // flpnl_Table
             // 
             this.flpnl_Table.AutoScroll = true;
-            this.flpnl_Table.Controls.Add(this.btt_Table);
             this.flpnl_Table.Location = new System.Drawing.Point(228, 190);
             this.flpnl_Table.Name = "flpnl_Table";
             this.flpnl_Table.Size = new System.Drawing.Size(756, 524);
             this.flpnl_Table.TabIndex = 1;
-            // 
-            // btt_Table
-            // 
-            this.btt_Table.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btt_Table.Location = new System.Drawing.Point(3, 3);
-            this.btt_Table.Name = "btt_Table";
-            this.btt_Table.Size = new System.Drawing.Size(244, 125);
-            this.btt_Table.TabIndex = 0;
-            this.btt_Table.Text = "Bàn";
-            this.btt_Table.UseVisualStyleBackColor = true;
-            this.btt_Table.Click += new System.EventHandler(this.btt_Table_Click);
             // 
             // label1
             // 
@@ -130,13 +116,13 @@
             // 
             // pnl_ThongTin
             // 
-            this.pnl_ThongTin.Controls.Add(this.txtTrangThai);
-            this.pnl_ThongTin.Controls.Add(this.txtThoiGian);
-            this.pnl_ThongTin.Controls.Add(this.txtHoaDon);
+            this.pnl_ThongTin.Controls.Add(this.text_HoaDon);
+            this.pnl_ThongTin.Controls.Add(this.text_ThoiGian);
+            this.pnl_ThongTin.Controls.Add(this.text_TrangThai);
             this.pnl_ThongTin.Controls.Add(this.btt_ClearTable);
             this.pnl_ThongTin.Controls.Add(this.label9);
             this.pnl_ThongTin.Controls.Add(this.flowLayoutPanel2);
-            this.pnl_ThongTin.Controls.Add(this.label8);
+            this.pnl_ThongTin.Controls.Add(this.label);
             this.pnl_ThongTin.Controls.Add(this.label6);
             this.pnl_ThongTin.Controls.Add(this.label3);
             this.pnl_ThongTin.Location = new System.Drawing.Point(1012, 96);
@@ -144,33 +130,35 @@
             this.pnl_ThongTin.Size = new System.Drawing.Size(363, 618);
             this.pnl_ThongTin.TabIndex = 9;
             // 
-            // txtTrangThai
+            // text_HoaDon
             // 
-            this.txtTrangThai.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTrangThai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTrangThai.Location = new System.Drawing.Point(171, 69);
-            this.txtTrangThai.Name = "txtTrangThai";
-            this.txtTrangThai.Size = new System.Drawing.Size(177, 23);
-            this.txtTrangThai.TabIndex = 11;
+            this.text_HoaDon.AutoSize = true;
+            this.text_HoaDon.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.text_HoaDon.Location = new System.Drawing.Point(170, 151);
+            this.text_HoaDon.Name = "text_HoaDon";
+            this.text_HoaDon.Size = new System.Drawing.Size(19, 22);
+            this.text_HoaDon.TabIndex = 9;
+            this.text_HoaDon.Text = "c";
             // 
-            // txtThoiGian
+            // text_ThoiGian
             // 
-            this.txtThoiGian.AllowDrop = true;
-            this.txtThoiGian.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtThoiGian.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtThoiGian.Location = new System.Drawing.Point(172, 105);
-            this.txtThoiGian.Name = "txtThoiGian";
-            this.txtThoiGian.Size = new System.Drawing.Size(177, 23);
-            this.txtThoiGian.TabIndex = 10;
+            this.text_ThoiGian.AutoSize = true;
+            this.text_ThoiGian.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.text_ThoiGian.Location = new System.Drawing.Point(168, 114);
+            this.text_ThoiGian.Name = "text_ThoiGian";
+            this.text_ThoiGian.Size = new System.Drawing.Size(20, 22);
+            this.text_ThoiGian.TabIndex = 8;
+            this.text_ThoiGian.Text = "b";
             // 
-            // txtHoaDon
+            // text_TrangThai
             // 
-            this.txtHoaDon.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHoaDon.Location = new System.Drawing.Point(172, 174);
-            this.txtHoaDon.Name = "txtHoaDon";
-            this.txtHoaDon.Size = new System.Drawing.Size(177, 23);
-            this.txtHoaDon.TabIndex = 9;
+            this.text_TrangThai.AutoSize = true;
+            this.text_TrangThai.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.text_TrangThai.Location = new System.Drawing.Point(168, 72);
+            this.text_TrangThai.Name = "text_TrangThai";
+            this.text_TrangThai.Size = new System.Drawing.Size(19, 22);
+            this.text_TrangThai.TabIndex = 7;
+            this.text_TrangThai.Text = "a";
             // 
             // btt_ClearTable
             // 
@@ -186,7 +174,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(24, 174);
+            this.label9.Location = new System.Drawing.Point(24, 151);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(142, 22);
             this.label9.TabIndex = 5;
@@ -210,21 +198,21 @@
             this.dgv_HoaDon.Size = new System.Drawing.Size(333, 332);
             this.dgv_HoaDon.TabIndex = 0;
             // 
-            // label8
+            // label
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(24, 72);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(95, 22);
-            this.label8.TabIndex = 3;
-            this.label8.Text = "Trạng thái:";
+            this.label.AutoSize = true;
+            this.label.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label.Location = new System.Drawing.Point(24, 72);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(95, 22);
+            this.label.TabIndex = 3;
+            this.label.Text = "Trạng thái:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(24, 108);
+            this.label6.Location = new System.Drawing.Point(24, 114);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(126, 22);
             this.label6.TabIndex = 1;
@@ -234,7 +222,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(62, 19);
+            this.label3.Location = new System.Drawing.Point(114, 15);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(192, 32);
             this.label3.TabIndex = 0;
@@ -266,7 +254,7 @@
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "Table";
             this.Text = "Table";
-            this.flpnl_Table.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.Table_Load);
             this.pnl_ThongTin.ResumeLayout(false);
             this.pnl_ThongTin.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
@@ -283,20 +271,19 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btt_Table;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel pnl_ThongTin;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Button btt_ClearTable;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtTrangThai;
-        private System.Windows.Forms.TextBox txtThoiGian;
-        private System.Windows.Forms.TextBox txtHoaDon;
         private System.Windows.Forms.DataGridView dgv_HoaDon;
+        private System.Windows.Forms.Label text_HoaDon;
+        private System.Windows.Forms.Label text_ThoiGian;
+        private System.Windows.Forms.Label text_TrangThai;
     }
 }

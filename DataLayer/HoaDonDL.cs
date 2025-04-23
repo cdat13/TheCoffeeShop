@@ -14,9 +14,13 @@ namespace DataLayer
     {
        public List<HoaDon> GetHoaDons(int table_id)
         {
-            string sql = "SELECT * FROM OrderDetail WHERE table_id='" + table_id + "'";
-            int id, order_id, product_id, quantity;
-            float price;
+            string sql = "SELECT ord.id, p.name, quantity, quantity * p.price as total_price, ordd.price " +
+                "\r\nFROM OrderDetail as ordd" +
+                "\r\nINNER JOIN [Product] as p ON ordd.product_id = p.id" +
+                "\r\nINNER JOIN [Order] as ord ON ordd.order_id = ord.id" +
+                "\r\nWHERE table_id = '" + table_id +"'";
+            int ord_id, quantity, total_price, order_price;
+            string name;
             List<HoaDon> hoadons = new List<HoaDon>();
             try
             {
@@ -24,13 +28,12 @@ namespace DataLayer
                 SqlDataReader reader = MyExecuteReader(sql, CommandType.Text);
                 while (reader.Read())
                 {
-                    id = Convert.ToInt32(reader[0]);
-                    order_id = Convert.ToInt32(reader[1]);
-                    product_id = Convert.ToInt32(reader[2]);
-                    price = Convert.ToSingle(reader[3]);
-                    quantity = Convert.ToInt32(reader[4]);
-                    table_id = Convert.ToInt32(reader[5]);
-                    HoaDon hoadon = new DataTranfer.HoaDon(id,order_id,product_id,table_id,price,quantity);
+                    ord_id = Convert.ToInt32(reader[0]);
+                    name = Convert.ToString(reader[1]);
+                    quantity = Convert.ToInt32(reader[2]);
+                    total_price = Convert.ToInt32(reader[3]);
+                    order_price = Convert.ToInt32(reader[4]);
+                    HoaDon hoadon = new DataTranfer.HoaDon(ord_id,name,quantity,total_price,order_price);
                     hoadons.Add(hoadon);
                 }
                 reader.Close();

@@ -10,12 +10,12 @@ namespace DataTranfer
     {
         public int Id { get; set; }
         public bool Status { get; set; }
-        public string Datatime { get; set; }
-        public Ban(int id, bool status, string datatime)
+        public DateTime Datetime { get; set; }
+        public Ban(int id, bool status, DateTime datetime)
         {
             Id = id;
             Status = status;
-            Datatime = datatime;
+            Datetime = datetime;
         }
     }
 }

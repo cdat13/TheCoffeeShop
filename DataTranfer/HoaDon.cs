@@ -8,20 +8,19 @@ namespace DataTranfer
 {
     public class HoaDon
     {
-        public int Id { get; set; }
         public int Order_Id { get; set; }
-        public int Product_Id { get; set; }
-        public int Table_Id { get; set; }
-        public float Price { get; set; }
+        public string Name { get; set; }
         public int Quantity { get; set; }
-        public HoaDon(int id, int order_Id, int product_Id, int table_Id, float price, int quantity)
+        public int Total_price { get; set; }
+        public int Order_price { get; set; }
+        
+        public HoaDon(int order_id, string name, int quantity, int total_price, int order_price)
         {
-            Id = id;
-            Order_Id = order_Id;
-            Product_Id = product_Id;
-            Table_Id = table_Id;
-            Price = price;
+            Order_Id = order_id;
+            Name = name;
             Quantity = quantity;
+            Total_price = total_price;
+            Order_price = order_price;
         }
     }
 }
