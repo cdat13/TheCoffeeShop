@@ -21,7 +21,6 @@ namespace PresentationLayer
         }
         BanBL banBL = new BanBL();
 
-
         private Button tableSetUp(int tableNumber)
         {
             Button btt = new Button();
@@ -58,18 +57,21 @@ namespace PresentationLayer
                 if (banSo.Status == true)
                 {
                     text_TrangThai.Text = "Trống";
-                    text_ThoiGian.Text = banSo.Datetime.ToString("dd/MM/yyyy HH:mm");
+                    text_ThoiGian.Text = "";
+                    text_HoaDon.Text = "";
+                    dgv_HoaDon.DataSource = null ;
                 }
                 else
-                    text_TrangThai.Text = "Không trống";
-
-                // Get Order Detail
-                List<HoaDon> dsHoaDon = new HoaDonBL().GetHoaDons(tableNumber);
-                if(dsHoaDon != null && dsHoaDon.Count > 0)
                 {
-                    text_HoaDon.Text = dsHoaDon[0].Order_Id.ToString();
-                    dgv_HoaDon.DataSource = dsHoaDon;
-                }
+                    text_TrangThai.Text = "Không trống";
+                    text_ThoiGian.Text = banSo.Datetime.ToString("dd/MM/yyyy HH:mm");
+                    List<HoaDon> dsHoaDon = new HoaDonBL().GetHoaDons(tableNumber);
+                    if (dsHoaDon != null && dsHoaDon.Count > 0)
+                    {
+                        text_HoaDon.Text = dsHoaDon[0].Order_Id.ToString();
+                        dgv_HoaDon.DataSource = dsHoaDon;
+                    }
+                }                
             }
         }
 
@@ -82,5 +84,6 @@ namespace PresentationLayer
             }
         }
 
+        
     }
 }

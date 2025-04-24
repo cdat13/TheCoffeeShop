@@ -136,9 +136,8 @@
             this.text_HoaDon.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.text_HoaDon.Location = new System.Drawing.Point(170, 151);
             this.text_HoaDon.Name = "text_HoaDon";
-            this.text_HoaDon.Size = new System.Drawing.Size(19, 22);
+            this.text_HoaDon.Size = new System.Drawing.Size(0, 22);
             this.text_HoaDon.TabIndex = 9;
-            this.text_HoaDon.Text = "c";
             // 
             // text_ThoiGian
             // 
@@ -146,9 +145,8 @@
             this.text_ThoiGian.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.text_ThoiGian.Location = new System.Drawing.Point(168, 114);
             this.text_ThoiGian.Name = "text_ThoiGian";
-            this.text_ThoiGian.Size = new System.Drawing.Size(20, 22);
+            this.text_ThoiGian.Size = new System.Drawing.Size(0, 22);
             this.text_ThoiGian.TabIndex = 8;
-            this.text_ThoiGian.Text = "b";
             // 
             // text_TrangThai
             // 
@@ -156,9 +154,8 @@
             this.text_TrangThai.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.text_TrangThai.Location = new System.Drawing.Point(168, 72);
             this.text_TrangThai.Name = "text_TrangThai";
-            this.text_TrangThai.Size = new System.Drawing.Size(19, 22);
+            this.text_TrangThai.Size = new System.Drawing.Size(0, 22);
             this.text_TrangThai.TabIndex = 7;
-            this.text_TrangThai.Text = "a";
             // 
             // btt_ClearTable
             // 
