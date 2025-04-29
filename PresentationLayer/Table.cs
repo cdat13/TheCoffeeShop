@@ -54,6 +54,7 @@ namespace PresentationLayer
 
                 // Get Table
                 Ban banSo = banBL.BanSo(tableNumber);
+                text_TableNumber.Text = tableNumber.ToString();
                 if (banSo.Status == true)
                 {
                     text_TrangThai.Text = "Trống";
@@ -83,7 +84,43 @@ namespace PresentationLayer
                 flpnl_Table.Controls.Add(tableSetUp(i)); 
             }
         }
+        private void LoadTables()
+        {
+            // Clear existing buttons from the flow panel
+            flpnl_Table.Controls.Clear();
 
-        
+            // Add buttons again (number of tables)
+            for (int i = 1; i < 7; i++)
+            {
+                flpnl_Table.Controls.Add(tableSetUp(i));
+            }
+
+            text_TrangThai.Text = "Trống";
+            text_ThoiGian.Text = "";
+            text_HoaDon.Text = "";
+            dgv_HoaDon.DataSource = null;
+        }
+
+        private void btt_ClearTable_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(text_TableNumber.Text);
+            Ban banChon = banBL.BanSo(id);
+
+
+            if (text_TrangThai.Text == "Không trống")
+            {
+                try
+                {
+                    banBL.Update(banChon);
+                    LoadTables();
+                    MessageBox.Show("Bàn đã được làm trống.");
+                }
+                catch (SqlException ex)
+                {
+
+                    throw ex;
+                }
+            }
+        }
     }
 }

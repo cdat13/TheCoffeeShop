@@ -43,5 +43,24 @@ namespace DataLayer
                 Disconnect();
             }
         }
+
+        public int Update(Ban ban)
+        {
+            string sql = "UpdateTable";
+            List<SqlParameter> parameters = new List<SqlParameter>();
+
+            parameters.Add(new SqlParameter("@table_id", ban.Id));
+
+            try
+            {
+                return MyExecuteNonQuery(sql, CommandType.StoredProcedure, parameters);
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
+        }
+        
     }
 }
