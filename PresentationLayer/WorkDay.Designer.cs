@@ -33,11 +33,11 @@
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox_CaLam = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.datePicker = new System.Windows.Forms.DateTimePicker();
             this.btt_Tao = new System.Windows.Forms.Button();
             this.comboBox_NhanVien = new System.Windows.Forms.ComboBox();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
@@ -76,11 +76,11 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.comboBox_CaLam);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.dateTimePicker1);
+            this.panel1.Controls.Add(this.datePicker);
             this.panel1.Controls.Add(this.btt_Tao);
             this.panel1.Controls.Add(this.comboBox_NhanVien);
             this.panel1.Location = new System.Drawing.Point(222, 133);
@@ -98,16 +98,21 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "Tạo ngày công";
             // 
-            // comboBox1
+            // comboBox_CaLam
             // 
-            this.comboBox1.AllowDrop = true;
-            this.comboBox1.BackColor = System.Drawing.Color.Silver;
-            this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(96, 48);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(170, 30);
-            this.comboBox1.TabIndex = 7;
+            this.comboBox_CaLam.AllowDrop = true;
+            this.comboBox_CaLam.BackColor = System.Drawing.Color.Silver;
+            this.comboBox_CaLam.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_CaLam.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_CaLam.FormattingEnabled = true;
+            this.comboBox_CaLam.Items.AddRange(new object[] {
+            "CA01",
+            "CA02",
+            "CA03"});
+            this.comboBox_CaLam.Location = new System.Drawing.Point(96, 48);
+            this.comboBox_CaLam.Name = "comboBox_CaLam";
+            this.comboBox_CaLam.Size = new System.Drawing.Size(170, 30);
+            this.comboBox_CaLam.TabIndex = 7;
             // 
             // label4
             // 
@@ -139,14 +144,14 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Ca làm:";
             // 
-            // dateTimePicker1
+            // datePicker
             // 
-            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.Silver;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(416, 48);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 30);
-            this.dateTimePicker1.TabIndex = 3;
+            this.datePicker.CalendarMonthBackground = System.Drawing.Color.Silver;
+            this.datePicker.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.datePicker.Location = new System.Drawing.Point(416, 48);
+            this.datePicker.Name = "datePicker";
+            this.datePicker.Size = new System.Drawing.Size(200, 30);
+            this.datePicker.TabIndex = 3;
             // 
             // btt_Tao
             // 
@@ -158,11 +163,13 @@
             this.btt_Tao.TabIndex = 1;
             this.btt_Tao.Text = "Tạo";
             this.btt_Tao.UseVisualStyleBackColor = false;
+            this.btt_Tao.Click += new System.EventHandler(this.btt_Tao_Click);
             // 
             // comboBox_NhanVien
             // 
             this.comboBox_NhanVien.AllowDrop = true;
             this.comboBox_NhanVien.BackColor = System.Drawing.Color.Silver;
+            this.comboBox_NhanVien.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_NhanVien.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_NhanVien.FormattingEnabled = true;
             this.comboBox_NhanVien.Location = new System.Drawing.Point(777, 48);
@@ -230,11 +237,11 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btt_Tao;
         private System.Windows.Forms.ComboBox comboBox_NhanVien;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker datePicker;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox_CaLam;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Label label6;

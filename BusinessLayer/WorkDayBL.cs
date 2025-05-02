@@ -25,7 +25,18 @@ namespace BusinessLayer
             }
             catch (SqlException ex)
             {
+                throw ex;
+            }
+        }
 
+        public int ThemCaLam(int user_id, string calam_id, DateTime date)
+        {
+            try
+            {
+                return workDayDL.ThemCaLam(user_id, calam_id, date);
+            }
+            catch (SqlException ex)
+            {
                 throw ex;
             }
         }

@@ -13,6 +13,7 @@ namespace DataTranfer
         public string User_Name { get; set; }
         public string User_Role { get; set; }
         public DateTime Date { get; set; }
+        public int User_Id { get; set; }
 
         public WorkDay(string id, string workDay_Name, string user_Name, string user_Role, DateTime date)
         {
@@ -21,6 +22,13 @@ namespace DataTranfer
             User_Name = user_Name;
             User_Role = user_Role;
             Date = date;
+        }
+
+        public WorkDay(int user_id, string calam_id, DateTime date)
+        {
+            Id = calam_id;
+            Date = date;
+            User_Id = user_id;
         }
     
 

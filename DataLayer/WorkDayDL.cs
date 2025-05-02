@@ -13,10 +13,10 @@ namespace DataLayer
     {
         public List<WorkDay> GetWorkDays()
         {
-            string sql = "SELECT CaLamViec.id, CaLamViec.[name],[User].[name], [User].user_role ,CaLamViec.[date] " +
-                "FROM CaLamViec " +
-                "INNER JOIN PhanCongCaLam ON CaLamViec.id = PhanCongCaLam.calam_id " +
-                "INNER JOIN [User] ON PhanCongCaLam.[user_id] = [User].id";
+            string sql = "SELECT CaLamViec.id, CaLamViec.[name], [User].[name], [User].user_role, PhanCongCaLam.ngayLam" +
+                "\r\nFROM CaLamViec " +
+                "\r\nINNER JOIN PhanCongCaLam ON CaLamViec.id = PhanCongCaLam.calam_id" +
+                " \r\nINNER JOIN [User] ON PhanCongCaLam.[user_id] = [User].id";
             string id, workdayName, userName, userRole;
             DateTime workDate;
             List<WorkDay> workDays = new List<WorkDay>();
@@ -37,15 +37,33 @@ namespace DataLayer
                 reader.Close();
                 return workDays;
             }
-            catch (SqlException)
+            catch (SqlException ex)
             {
-
-                throw;
+                throw ex;
             }
             finally
             {
                 Disconnect();
             }
         }
+
+        public int ThemCaLam(int user_id, string calam_id, DateTime date)
+        {
+            string sql = "PhanCong";
+            List<SqlParameter> parameters = new List<SqlParameter>();
+
+            parameters.Add(new SqlParameter("@user_id", user_id));
+            parameters.Add(new SqlParameter("@ngayLam", date ));
+            parameters.Add(new SqlParameter("@calam_id", calam_id));
+
+            try
+            {
+                return MyExecuteNonQuery(sql, CommandType.StoredProcedure, parameters);
+            } 
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        } 
     }
 }
