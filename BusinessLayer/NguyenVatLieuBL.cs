@@ -1,27 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DataLayer;
 using DataTranfer;
+using System.Data.SqlClient;
 
 namespace BusinessLayer
 {
-    public class HoaDonBL
+    public class NguyenVatLieuBL
     {
-        private HoaDonDL hoadonDL;
-        public HoaDonBL()
+        private NguyenVatLieuDL nguyenVatLieuDL;
+        public NguyenVatLieuBL()
         {
-            hoadonDL = new HoaDonDL();
+            nguyenVatLieuDL = new NguyenVatLieuDL();
         }
-        
-        public List<HoaDon> GetHoaDons(int SoBan)
+
+        public List<NguyenVatLieu> GetNguyenVatLieuBLs()
         {
             try
             {
-                return (hoadonDL.GetHoaDons(SoBan));
+                return (nguyenVatLieuDL.GetNguyenVatLieus());
             }
             catch (SqlException ex)
             {
@@ -29,6 +29,5 @@ namespace BusinessLayer
             }
         }
 
-        
     }
 }

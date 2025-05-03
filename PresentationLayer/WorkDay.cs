@@ -92,7 +92,15 @@ namespace PresentationLayer
                 DateTime date = datePicker.Value.Date;
                 WorkDayBL workDayBL = new WorkDayBL();
              
-                workDayBL.ThemCaLam(user_id, calam_id, date);
+                MessageBoxButtons buttons = MessageBoxButtons.OKCancel;
+                DialogResult result;
+
+                result = MessageBox.Show("Bạn có muốn thêm ca làm?", "Lựa chọn", buttons);
+                if(result == DialogResult.OK)
+                {
+                    workDayBL.ThemCaLam(user_id, calam_id, date);
+                    WorkDayLoad();
+                }
             }
             else
             {

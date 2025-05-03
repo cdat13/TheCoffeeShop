@@ -28,5 +28,11 @@ namespace PresentationLayer
             WorkDay workDay = new WorkDay();
             workDay.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            NguyenVatLieu nguyenVatLieu = new NguyenVatLieu();
+            nguyenVatLieu.ShowDialog();
+        }
     }
 }

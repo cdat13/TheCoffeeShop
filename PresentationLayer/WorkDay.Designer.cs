@@ -43,6 +43,7 @@
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.label6 = new System.Windows.Forms.Label();
             this.dgv_NgayCong = new System.Windows.Forms.DataGridView();
+            this.btt_Xoa = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_NgayCong)).BeginInit();
@@ -206,11 +207,23 @@
             this.dgv_NgayCong.Size = new System.Drawing.Size(1135, 380);
             this.dgv_NgayCong.TabIndex = 10;
             // 
+            // btt_Xoa
+            // 
+            this.btt_Xoa.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.btt_Xoa.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btt_Xoa.Location = new System.Drawing.Point(1196, 671);
+            this.btt_Xoa.Name = "btt_Xoa";
+            this.btt_Xoa.Size = new System.Drawing.Size(147, 60);
+            this.btt_Xoa.TabIndex = 9;
+            this.btt_Xoa.Text = "Xoa";
+            this.btt_Xoa.UseVisualStyleBackColor = false;
+            // 
             // WorkDay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1372, 734);
+            this.Controls.Add(this.btt_Xoa);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.flowLayoutPanel4);
@@ -246,5 +259,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dgv_NgayCong;
+        private System.Windows.Forms.Button btt_Xoa;
     }
 }
