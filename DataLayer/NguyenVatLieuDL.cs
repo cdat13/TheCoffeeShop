@@ -41,5 +41,25 @@ namespace DataLayer
                 throw ex;
             }
         }
+
+        public int LayNguyenVatLieu(int id, int quantity)
+        {
+            string sql = "LayNguyenVatLieu";
+            List<SqlParameter> parameters = new List<SqlParameter>();
+
+            parameters.Add(new SqlParameter("@layNVL", quantity));
+            parameters.Add(new SqlParameter("@product_id", id));
+
+            try
+            {
+                return MyExecuteNonQuery(sql, CommandType.StoredProcedure, parameters);
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
+        }
     }
+
 }

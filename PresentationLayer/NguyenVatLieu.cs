@@ -18,6 +18,20 @@ namespace PresentationLayer
             InitializeComponent();
         }
 
+        private void LayNguyenLieu_Load()
+        {
+            var list = new NguyenVatLieuBL().GetNguyenVatLieuBLs();
+            if(list != null && list.Count > 0)
+            {
+                dgv_NguyenVatLieu.DataSource = list;
+
+            }
+            else
+            {
+                MessageBox.Show("Không có dữ liệu");
+            }
+        }
+
         private DataGridView CustomDGV(DataGridView dgv, List<String> names, List<String> ten)
         {
             dgv.Rows.Clear();
@@ -64,6 +78,57 @@ namespace PresentationLayer
             }
         }
 
-        
+        private void bttSoLuong_Click(object sender, EventArgs e)
+        {
+
+            if (dgv_NguyenVatLieu.SelectedCells.Count != 0)
+            {
+                var selectedRow = dgv_NguyenVatLieu.CurrentRow;
+                if (selectedRow == null)    
+                {
+                    MessageBox.Show("Không thể lấy dòng đang chọn.", "Lỗi");
+                }
+
+                if (!int.TryParse(txtSoLuong.Text.Trim(), out int laySoLuong) && laySoLuong <= 0 && string.IsNullOrWhiteSpace(txtSoLuong.Text))
+                {
+                    MessageBox.Show("Số lượng phải là một số nguyên hợp lệ!", "Cảnh báo");
+                    return;
+                }
+                
+                laySoLuong = int.Parse(txtSoLuong.Text);
+                int product_id = int.Parse(dgv_NguyenVatLieu.SelectedCells[0].Value.ToString());
+                int soLuongKho = int.Parse(dgv_NguyenVatLieu.SelectedCells[3].Value.ToString());
+
+                if (laySoLuong <= soLuongKho)
+                {
+                    MessageBoxButtons buttons = MessageBoxButtons.OKCancel;
+                    DialogResult result;
+                    result = MessageBox.Show("Bạn có muốn thêm ca làm?", "Lựa chọn", buttons);
+
+                    if (result == DialogResult.OK)
+                    {
+                        NguyenVatLieuBL nguyenVatLieuBL = new NguyenVatLieuBL();
+                        nguyenVatLieuBL.LayNguyenVatLieu(product_id, laySoLuong);
+                        LayNguyenLieu_Load();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Vui lòng chọn đầy đủ thông tin trước khi tạo.");
+                        return;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Số lượng yêu cầu vượt quá số lượng trong kho!", "Lỗi");
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn một dòng nguyên vật liệu.", "Thông báo");
+                return;
+            }
+            
+        }
     }
 }

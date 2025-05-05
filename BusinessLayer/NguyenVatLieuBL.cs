@@ -29,5 +29,18 @@ namespace BusinessLayer
             }
         }
 
+        public int LayNguyenVatLieu(int id, int quantity)
+        {
+            try
+            {
+                return nguyenVatLieuDL.LayNguyenVatLieu(id, quantity);
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
+        }
+
     }
 }

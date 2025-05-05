@@ -22,6 +22,12 @@ namespace DataTranfer
             Quantity = quantity;
             Product_date = product_date;
         }
+
+        public NguyenVatLieu(int id, int quantity)
+        {
+            Id = id;
+            Quantity = quantity;
+        }
         
 
     }
