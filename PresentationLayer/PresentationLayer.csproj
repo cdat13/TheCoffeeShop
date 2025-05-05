@@ -86,6 +86,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Table.resx">
       <DependentUpon>Table.cs</DependentUpon>
@@ -115,6 +116,22 @@
       <Project>{e6c3897b-3153-4619-95dc-564cee995553}</Project>
       <Name>DataTranfer</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Picture\monitor_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Picture\report_card_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Picture\staff_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Picture\user_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Picture\mainhome.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

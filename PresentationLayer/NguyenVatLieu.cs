@@ -42,6 +42,11 @@ namespace PresentationLayer
         }
         private void NguyenVatLieu_Load(object sender, EventArgs e)
         {
+            this.WindowState = FormWindowState.Maximized;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.Bounds = Screen.PrimaryScreen.Bounds;
+
+
             List<String> names = new List<String>() {"Id", "name", "category", "quantity", "product_date" };
             List<String> ten = new List<String>() { "Id", "Tên sản phẩm", "Loại sản phẩm", "Số lượng", "Hạn sử dụng" };
 
@@ -58,6 +63,7 @@ namespace PresentationLayer
 
             }
         }
+
         
     }
 }
