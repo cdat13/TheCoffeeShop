@@ -21,6 +21,7 @@ namespace BusinessLayer
         {
             try
             {
+     
                 return (nguyenVatLieuDL.GetNguyenVatLieus());
             }
             catch (SqlException ex)

@@ -40,6 +40,7 @@ namespace PresentationLayer
             dgv.Rows.Clear();
             dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgv.AutoGenerateColumns = false;
+            dgv.RowHeadersVisible = false;
 
 
             for (int i = 0; i < names.Count; i++)

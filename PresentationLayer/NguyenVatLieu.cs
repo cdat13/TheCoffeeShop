@@ -35,7 +35,7 @@ namespace PresentationLayer
         private DataGridView CustomDGV(DataGridView dgv, List<String> names, List<String> ten)
         {
             dgv.Rows.Clear();
-
+            dgv.RowHeadersVisible = false;
             dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgv.AutoGenerateColumns = false;
 

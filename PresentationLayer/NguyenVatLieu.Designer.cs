@@ -315,7 +315,7 @@
             this.bttSoLuong.Name = "bttSoLuong";
             this.bttSoLuong.Size = new System.Drawing.Size(118, 54);
             this.bttSoLuong.TabIndex = 14;
-            this.bttSoLuong.Text = "Xóa lọc";
+            this.bttSoLuong.Text = "Lấy";
             this.bttSoLuong.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.bttSoLuong.UseVisualStyleBackColor = true;
             this.bttSoLuong.Click += new System.EventHandler(this.bttSoLuong_Click);
