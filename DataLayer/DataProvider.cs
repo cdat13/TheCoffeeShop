@@ -72,10 +72,19 @@ namespace DataTranfer
             }
         }
 
-        public SqlDataReader MyExecuteReader(string sql, CommandType type)
+        public SqlDataReader MyExecuteReader(string sql, CommandType type, List<SqlParameter> parameters = null)
         {
             SqlCommand cmd = new SqlCommand(sql, cn);
             cmd.CommandType = type;
+
+            if (parameters != null)
+            {
+                foreach (SqlParameter parameter in parameters)
+                {
+                    cmd.Parameters.Add(parameter);
+                }
+            }
+
             try
             {
                 return (cmd.ExecuteReader());

@@ -42,6 +42,44 @@ namespace DataLayer
             }
         }
 
+        public List<NguyenVatLieu> BaoCaoThang(DateTime date)
+        {
+            string sql = "BaoCaoThang";
+            int id, quantity;
+            string name, category;
+            DateTime product_date;
+            List<SqlParameter> parameters = new List<SqlParameter>();
+
+            parameters.Add(new SqlParameter("@month", date.Month));
+            parameters.Add(new SqlParameter("@year", date.Year));
+
+            List<NguyenVatLieu> nguyenVatLieus = new List<NguyenVatLieu>();
+
+            try
+            {
+                Connect();
+                SqlDataReader reader = MyExecuteReader(sql, CommandType.StoredProcedure, parameters);
+                while (reader.Read())
+                {
+                    id = (int)reader[0];
+                    name = reader[1].ToString();
+                    category = reader[2].ToString();
+                    quantity = (int)reader[3];
+                    product_date = (DateTime)reader[4];
+
+                    NguyenVatLieu nguyenVatLieu = new NguyenVatLieu(id, name, category, quantity, product_date);
+                    nguyenVatLieus.Add(nguyenVatLieu);
+                }
+                reader.Close();
+                return nguyenVatLieus;
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
+
+
         public int LayNguyenVatLieu(int id, int quantity)
         {
             string sql = "LayNguyenVatLieu";
@@ -60,6 +98,7 @@ namespace DataLayer
                 throw ex;
             }
         }
+
     }
 
 }

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetNguyenVatLieu" targetNamespace="http://tempuri.org/DataSetNguyenVatLieu.xsd" xmlns:mstns="http://tempuri.org/DataSetNguyenVatLieu.xsd" xmlns="http://tempuri.org/DataSetNguyenVatLieu.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetNguyenVatLieu" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="DataSetNguyenVatLieu" msprop:Generator_DataSetName="DataSetNguyenVatLieu">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Nguyen_x0020_Vat_x0020_Lieu" msprop:Generator_RowEvHandlerName="Nguyen_Vat_LieuRowChangeEventHandler" msprop:Generator_RowDeletedName="Nguyen_Vat_LieuRowDeleted" msprop:Generator_RowDeletingName="Nguyen_Vat_LieuRowDeleting" msprop:Generator_RowEvArgName="Nguyen_Vat_LieuRowChangeEvent" msprop:Generator_TablePropName="Nguyen_Vat_Lieu" msprop:Generator_RowChangedName="Nguyen_Vat_LieuRowChanged" msprop:Generator_RowChangingName="Nguyen_Vat_LieuRowChanging" msprop:Generator_TableClassName="Nguyen_Vat_LieuDataTable" msprop:Generator_RowClassName="Nguyen_Vat_LieuRow" msprop:Generator_TableVarName="tableNguyen_Vat_Lieu" msprop:Generator_UserTableName="Nguyen Vat Lieu">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_UserColumnName="id" type="xs:string" minOccurs="0" />
+              <xs:element name="name" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_UserColumnName="name" type="xs:string" minOccurs="0" />
+              <xs:element name="category" msprop:Generator_ColumnPropNameInRow="category" msprop:Generator_ColumnPropNameInTable="categoryColumn" msprop:Generator_ColumnVarNameInTable="columncategory" msprop:Generator_UserColumnName="category" type="xs:string" minOccurs="0" />
+              <xs:element name="quantity" msprop:Generator_ColumnPropNameInRow="quantity" msprop:Generator_ColumnPropNameInTable="quantityColumn" msprop:Generator_ColumnVarNameInTable="columnquantity" msprop:Generator_UserColumnName="quantity" type="xs:string" minOccurs="0" />
+              <xs:element name="product_date" msprop:Generator_ColumnPropNameInRow="product_date" msprop:Generator_ColumnPropNameInTable="product_dateColumn" msprop:Generator_ColumnVarNameInTable="columnproduct_date" msprop:Generator_UserColumnName="product_date" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

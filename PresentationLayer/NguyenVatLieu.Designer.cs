@@ -48,6 +48,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btt_In = new System.Windows.Forms.Button();
             this.bttSoLuong = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_NguyenVatLieu)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -293,6 +294,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.btt_In);
             this.panel1.Controls.Add(this.bttSoLuong);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.comboBox_Loc);
@@ -306,6 +308,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1187, 217);
             this.panel1.TabIndex = 1;
+            // 
+            // btt_In
+            // 
+            this.btt_In.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btt_In.Location = new System.Drawing.Point(504, 79);
+            this.btt_In.Name = "btt_In";
+            this.btt_In.Size = new System.Drawing.Size(156, 75);
+            this.btt_In.TabIndex = 15;
+            this.btt_In.Text = "In báo cáo";
+            this.btt_In.UseVisualStyleBackColor = true;
+            this.btt_In.Click += new System.EventHandler(this.btt_In_Click);
             // 
             // bttSoLuong
             // 
@@ -365,5 +378,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Button bttSoLuong;
+        private System.Windows.Forms.Button btt_In;
     }
 }

@@ -130,5 +130,11 @@ namespace PresentationLayer
             }
             
         }
+
+        private void btt_In_Click(object sender, EventArgs e)
+        {
+            BaoCaoNguyenVatLieu bc = new BaoCaoNguyenVatLieu();
+            bc.ShowDialog();
+        }
     }
 }
