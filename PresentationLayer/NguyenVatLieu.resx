@@ -118,14 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAJJJREFUSEvt
-        lEsKgDAMRHsSFx5HvP/GX6l6jpFAF3HajaZgwT7IJpnOFFLqXKMaAIwAVthZAAzsLwGBlQY8+0tAUdi/
-        6gAf6wb7JwE81yiZ7K2Ptat+el4PswKFkk0Auliz6qfn9fAh8rQ3brK/JSAL+1sCyi2ZNcWXzJr/Lflg
-        kYHA/hIg3/XJyhfIRdPvuvEZF/zQjutnOljeAAAAAElFTkSuQmCC
-</value>
-  </data>
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAABGdBTUEAALGPC/xhBQAABIhJREFUeF7t
@@ -151,4 +143,30 @@
         MzMzMzMzMzMzs1L/AYzXweadBED9AAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="pictureBox5.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="pictureBox3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="pictureBox2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAJJJREFUSEvt
+        lEsKgDAMRHsSFx5HvP/GX6l6jpFAF3HajaZgwT7IJpnOFFLqXKMaAIwAVthZAAzsLwGBlQY8+0tAUdi/
+        6gAf6wb7JwE81yiZ7K2Ptat+el4PswKFkk0Auliz6qfn9fAh8rQ3brK/JSAL+1sCyi2ZNcWXzJr/Lflg
+        kYHA/hIg3/XJyhfIRdPvuvEZF/zQjutnOljeAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <metadata name="button5.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="button4.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Bàn.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

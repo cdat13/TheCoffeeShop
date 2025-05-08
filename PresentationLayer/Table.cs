@@ -28,8 +28,8 @@ namespace PresentationLayer
 
             btt.Name = "btt_Table" + tableNumber;
             btt.AutoSize = false;
-            btt.Width = 175 ;
-            btt.Height = 115 ;
+            btt.Width = 200 ;
+            btt.Height = 180 ;
             btt.Text = "Bàn " + tableNumber;
             btt.Margin = new Padding(5); 
             btt.TextAlign = ContentAlignment.MiddleCenter;
@@ -47,7 +47,7 @@ namespace PresentationLayer
             QRCodeGenerator qrGenerator = new QRCodeGenerator();
             QRCodeData qrCodeData = qrGenerator.CreateQrCode(content, QRCodeGenerator.ECCLevel.Q);
             QRCode qrCode = new QRCode(qrCodeData);
-            Bitmap qrCodeImage = qrCode.GetGraphic(2);
+            Bitmap qrCodeImage = qrCode.GetGraphic(4);
             if (qrCodeImage != null)
             {
                 pic_QR.Image = qrCodeImage;
@@ -103,6 +103,9 @@ namespace PresentationLayer
 
         private void Table_Load(object sender, EventArgs e)
         {
+            this.WindowState = FormWindowState.Maximized;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.Bounds = Screen.PrimaryScreen.Bounds;
             // Add button to flow panel = number of table
             for (int i = 1; i < 7; i++)
             {

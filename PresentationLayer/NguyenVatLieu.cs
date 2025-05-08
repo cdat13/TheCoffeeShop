@@ -1,4 +1,5 @@
 ﻿using BusinessLayer;
+using PresentationLayer.FormBaoCao;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -103,7 +104,7 @@ namespace PresentationLayer
                 {
                     MessageBoxButtons buttons = MessageBoxButtons.OKCancel;
                     DialogResult result;
-                    result = MessageBox.Show("Bạn có muốn thêm ca làm?", "Lựa chọn", buttons);
+                    result = MessageBox.Show("Bạn đã chắc chắn về số lượng?", "Lựa chọn", buttons);
 
                     if (result == DialogResult.OK)
                     {
@@ -136,5 +137,13 @@ namespace PresentationLayer
             BaoCaoNguyenVatLieu bc = new BaoCaoNguyenVatLieu();
             bc.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            BaoCaoThang bct = new BaoCaoThang();
+            bct.ShowDialog();
+        }
+
+
     }
 }

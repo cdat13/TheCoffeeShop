@@ -30,6 +30,19 @@ namespace BusinessLayer
             }
         }
 
+        public List<NguyenVatLieu> BaoCaoThang(DateTime date)
+        {
+            try
+            {
+                return (nguyenVatLieuDL.BaoCaoThang(date));
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
+        }
+
         public int LayNguyenVatLieu(int id, int quantity)
         {
             try

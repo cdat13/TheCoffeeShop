@@ -109,5 +109,10 @@ namespace PresentationLayer
                 return;
             }    
         }
+
+        private void btt_Xoa_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

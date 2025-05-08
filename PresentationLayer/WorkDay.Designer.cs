@@ -215,8 +215,9 @@
             this.btt_Xoa.Name = "btt_Xoa";
             this.btt_Xoa.Size = new System.Drawing.Size(147, 60);
             this.btt_Xoa.TabIndex = 9;
-            this.btt_Xoa.Text = "Xoa";
+            this.btt_Xoa.Text = "Xóa";
             this.btt_Xoa.UseVisualStyleBackColor = false;
+            this.btt_Xoa.Click += new System.EventHandler(this.btt_Xoa_Click);
             // 
             // WorkDay
             // 

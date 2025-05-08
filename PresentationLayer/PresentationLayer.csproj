@@ -76,25 +76,23 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaoCaoNguyenVatLieu.cs">
+    <Compile Include="FormBaoCao\BaoCaoNguyenVatLieu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BaoCaoNguyenVatLieu.Designer.cs">
+    <Compile Include="FormBaoCao\BaoCaoNguyenVatLieu.Designer.cs">
       <DependentUpon>BaoCaoNguyenVatLieu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DataSetNguyenVatLieu.cs">
-      <DependentUpon>DataSetNguyenVatLieu.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DataSetNguyenVatLieu.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSetNguyenVatLieu.xsd</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBaoCao\BaoCaoThang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBaoCao\BaoCaoThang.Designer.cs">
+      <DependentUpon>BaoCaoThang.cs</DependentUpon>
     </Compile>
     <Compile Include="NguyenVatLieu.cs">
       <SubType>Form</SubType>
@@ -117,11 +115,15 @@
     <Compile Include="WorkDay.Designer.cs">
       <DependentUpon>WorkDay.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="BaoCaoNguyenVatLieu.resx">
+    <EmbeddedResource Include="FormBaoCao\BaoCaoNguyenVatLieu.resx">
       <DependentUpon>BaoCaoNguyenVatLieu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBaoCao\BaoCaoThang.rdlc" />
+    <EmbeddedResource Include="FormBaoCao\BaoCaoThang.resx">
+      <DependentUpon>BaoCaoThang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NguyenVatLieu.resx">
       <DependentUpon>NguyenVatLieu.cs</DependentUpon>
@@ -145,18 +147,12 @@
     <EmbeddedResource Include="WorkDay.resx">
       <DependentUpon>WorkDay.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="DataSetNguyenVatLieu.xsc">
-      <DependentUpon>DataSetNguyenVatLieu.xsd</DependentUpon>
-    </None>
-    <None Include="DataSetNguyenVatLieu.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSetNguyenVatLieu.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="DataSetNguyenVatLieu.xss">
-      <DependentUpon>DataSetNguyenVatLieu.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\BusinessLayer.BanBL.datasource" />
+    <None Include="Properties\DataSources\BusinessLayer.HoaDonBL.datasource" />
+    <None Include="Properties\DataSources\BusinessLayer.NguyenVatLieuBL.datasource" />
+    <None Include="Properties\DataSources\BusinessLayer.NhanVienBL.datasource" />
+    <None Include="Properties\DataSources\BusinessLayer.WorkDayBL.datasource" />
     <None Include="Properties\DataSources\DataTranfer.NguyenVatLieu.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
