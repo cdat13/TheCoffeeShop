@@ -93,7 +93,7 @@
             this.btt_In.Name = "btt_In";
             this.btt_In.Size = new System.Drawing.Size(156, 75);
             this.btt_In.TabIndex = 15;
-            this.btt_In.Text = "In báo cáo";
+            this.btt_In.Text = "In";
             this.btt_In.UseVisualStyleBackColor = true;
             this.btt_In.Click += new System.EventHandler(this.btt_In_Click);
             // 

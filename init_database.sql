@@ -1,0 +1,7 @@
+﻿CREATE OR ALTER PROCEDURE XoaCaLam @id int
+AS
+BEGIN
+DELETE FROM PhanCongCaLam
+WHERE PhanCongCaLam.id = @id;
+END
+GO

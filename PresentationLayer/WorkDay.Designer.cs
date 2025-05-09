@@ -44,6 +44,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.dgv_NgayCong = new System.Windows.Forms.DataGridView();
             this.btt_Xoa = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_NgayCong)).BeginInit();
@@ -182,6 +183,7 @@
             // 
             this.flowLayoutPanel2.Controls.Add(this.label6);
             this.flowLayoutPanel2.Controls.Add(this.dgv_NgayCong);
+            this.flowLayoutPanel2.Controls.Add(this.button1);
             this.flowLayoutPanel2.Location = new System.Drawing.Point(222, 262);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(1137, 403);
@@ -201,6 +203,7 @@
             // 
             this.dgv_NgayCong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_NgayCong.Location = new System.Drawing.Point(3, 28);
+            this.dgv_NgayCong.MultiSelect = false;
             this.dgv_NgayCong.Name = "dgv_NgayCong";
             this.dgv_NgayCong.RowHeadersWidth = 51;
             this.dgv_NgayCong.RowTemplate.Height = 24;
@@ -218,6 +221,15 @@
             this.btt_Xoa.Text = "Xóa";
             this.btt_Xoa.UseVisualStyleBackColor = false;
             this.btt_Xoa.Click += new System.EventHandler(this.btt_Xoa_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(3, 414);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // WorkDay
             // 
@@ -261,5 +273,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dgv_NgayCong;
         private System.Windows.Forms.Button btt_Xoa;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -41,5 +41,18 @@ namespace BusinessLayer
                 throw ex;
             }
         }
+
+        public int XoaCaLam(int id)
+        {
+            try
+            {
+                return workDayDL.XoaCaLam(id);
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
+        }
     }
 }

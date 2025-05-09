@@ -13,10 +13,10 @@ namespace DataLayer
     {
         public List<WorkDay> GetWorkDays()
         {
-            string sql = "SELECT CaLamViec.id, CaLamViec.[name], [User].[name], [User].user_role, PhanCongCaLam.ngayLam" +
-                "\r\nFROM CaLamViec " +
+            string sql = "SELECT PhanCongCaLam.id, CaLamViec.[name], [User].[name], [User].user_role, PhanCongCaLam.ngayLam" +
+                "\r\nFROM CaLamViec" +
                 "\r\nINNER JOIN PhanCongCaLam ON CaLamViec.id = PhanCongCaLam.calam_id" +
-                " \r\nINNER JOIN [User] ON PhanCongCaLam.[user_id] = [User].id";
+                "\r\nINNER JOIN [User] ON PhanCongCaLam.[user_id] = [User].id";
             string id, workdayName, userName, userRole;
             DateTime workDate;
             List<WorkDay> workDays = new List<WorkDay>();
@@ -65,5 +65,24 @@ namespace DataLayer
                 throw ex;
             }
         } 
+
+        public int XoaCaLam(int id)
+        {
+            string sql = "XoaCaLam";
+
+            List<SqlParameter> parameters = new List<SqlParameter>();
+
+            parameters.Add(new SqlParameter("@id", id));
+
+            try
+            {
+                return MyExecuteNonQuery(sql, CommandType.StoredProcedure, parameters);
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
+        }
     }
 }

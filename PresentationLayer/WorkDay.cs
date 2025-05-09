@@ -112,7 +112,29 @@ namespace PresentationLayer
 
         private void btt_Xoa_Click(object sender, EventArgs e)
         {
+            if(dgv_NgayCong.SelectedCells.Count != 0)
+            {
+                int rowIndex = dgv_NgayCong.CurrentCell.RowIndex;
+    
+                int id = Convert.ToInt32(dgv_NgayCong.Rows[rowIndex].Cells[0].Value);
+                WorkDayBL workDayBL = new WorkDayBL();                
 
+                MessageBoxButtons buttons = MessageBoxButtons.OKCancel;
+                DialogResult result;
+                result = MessageBox.Show("Bạn đã chắc?", "Lựa chọn", buttons);
+                if(result == DialogResult.OK)
+                {
+                    workDayBL.XoaCaLam(id);
+                    WorkDayLoad();
+                }
+
+            }
+        }
+
+        private void btt_SuaCaLam_Click(object sender, EventArgs e)
+        {
+
+            
         }
     }
 }
