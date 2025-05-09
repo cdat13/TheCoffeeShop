@@ -10,12 +10,12 @@ namespace DataTranfer
 {
     public class DataProvider
     {
-        private SqlConnection cn;
+        protected SqlConnection cn;
         SqlCommand cmd;
 
         public DataProvider()
         {
-            string cnStr = "Data Source=LAPTOP-V0546IIT;Initial Catalog=CoffeShop;Integrated Security=True";
+            string cnStr = "Data Source=DESKTOP-AHU5FGU;Initial Catalog=CoffeShop;Integrated Security=True";
             cn = new SqlConnection(cnStr);
         }
 

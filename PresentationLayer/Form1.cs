@@ -34,5 +34,12 @@ namespace PresentationLayer
             NguyenVatLieu nguyenVatLieu = new NguyenVatLieu();
             nguyenVatLieu.ShowDialog();
         }
+
+        private void Emp_mag_btn_Click(object sender, EventArgs e)
+        {
+            EmployeeManagement employeeManagement = new EmployeeManagement();
+            employeeManagement.ShowDialog();
+            this.Hide();
+        }
     }
 }

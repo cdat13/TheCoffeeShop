@@ -79,6 +79,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EmployeeManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeManagement.Designer.cs">
+      <DependentUpon>EmployeeManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormBaoCao\BaoCaoNguyenVatLieu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,9 @@
     <Compile Include="WorkDay.Designer.cs">
       <DependentUpon>WorkDay.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="EmployeeManagement.resx">
+      <DependentUpon>EmployeeManagement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormBaoCao\BaoCaoNguyenVatLieu.resx">
       <DependentUpon>BaoCaoNguyenVatLieu.cs</DependentUpon>
     </EmbeddedResource>
@@ -173,6 +182,10 @@
     <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">
       <Project>{f379423c-9de8-44d3-81ba-2ae7047537fa}</Project>
       <Name>BusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataLayer\DataLayer.csproj">
+      <Project>{c6dae382-746b-4491-860f-b5cdc92e5442}</Project>
+      <Name>DataLayer</Name>
     </ProjectReference>
     <ProjectReference Include="..\DataTranfer\DataTranfer.csproj">
       <Project>{e6c3897b-3153-4619-95dc-564cee995553}</Project>
