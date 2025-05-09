@@ -105,7 +105,7 @@
             this.bttSoLuong.Name = "bttSoLuong";
             this.bttSoLuong.Size = new System.Drawing.Size(156, 75);
             this.bttSoLuong.TabIndex = 14;
-            this.bttSoLuong.Text = "Lấy";
+            this.bttSoLuong.Text = "Cập nhật";
             this.bttSoLuong.UseVisualStyleBackColor = true;
             this.bttSoLuong.Click += new System.EventHandler(this.bttSoLuong_Click);
             // 
