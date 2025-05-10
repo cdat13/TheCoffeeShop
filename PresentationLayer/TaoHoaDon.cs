@@ -13,6 +13,7 @@ namespace PresentationLayer
 {
     public partial class TaoHoaDon: Form
     {
+        private readonly string connectionString = "Data Source=DESKTOP-AHU5FGU;Initial Catalog=CoffeShop;Integrated Security=True;";
         public TaoHoaDon()
         {
             InitializeComponent();
@@ -39,7 +40,7 @@ namespace PresentationLayer
         }
         private void LoadProductData()
         {
-            string connectionString = "Data Source=DESKTOP-AHU5FGU;Initial Catalog=CoffeShop;Integrated Security=True";
+            //string connectionString = "Data Source=DESKTOP-AHU5FGU;Initial Catalog=CoffeShop;Integrated Security=True";
             string query = "SELECT id, name, price, category FROM Product"; // Bỏ hình ảnh ở đây
 
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -140,7 +141,7 @@ namespace PresentationLayer
                 return;
             }
 
-            string connectionString = "Data Source=DESKTOP-AHU5FGU;Initial Catalog=CoffeShop;Integrated Security=True";
+            //string connectionString = "Data Source=DESKTOP-AHU5FGU;Initial Catalog=CoffeShop;Integrated Security=True";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {

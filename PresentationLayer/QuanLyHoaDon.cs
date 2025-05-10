@@ -13,6 +13,7 @@ namespace PresentationLayer
 {
     public partial class QuanLyHoaDon: Form
     {
+        private readonly string connectionString = "Data Source=DESKTOP-AHU5FGU;Initial Catalog=CoffeShop;Integrated Security=True;";
         public QuanLyHoaDon()
         {
             InitializeComponent();
@@ -20,7 +21,7 @@ namespace PresentationLayer
 
         private void LoadOrders()
         {
-            string connectionString = "Data Source=DESKTOP-AHU5FGU;Initial Catalog=CoffeShop;Integrated Security=True;";
+            //string connectionString = "Data Source=DESKTOP-AHU5FGU;Initial Catalog=CoffeShop;Integrated Security=True;";
             string query = "SELECT id, user_id, total, date, phuong_thuc FROM [Order]";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -48,7 +49,7 @@ namespace PresentationLayer
 
         private void LoadOrderDetails(int orderId)
         {
-            string connectionString = "Data Source=DESKTOP-AHU5FGU;Initial Catalog=CoffeShop;Integrated Security=True;";
+            //string connectionString = "Data Source=DESKTOP-AHU5FGU;Initial Catalog=CoffeShop;Integrated Security=True;";
 
             string query = @"
         SELECT 
@@ -107,7 +108,7 @@ namespace PresentationLayer
 
             if (result == DialogResult.Yes)
             {
-                string connectionString = "Data Source=DESKTOP-AHU5FGU;Initial Catalog=CoffeShop;Integrated Security=True;";
+                //string connectionString = "Data Source=DESKTOP-AHU5FGU;Initial Catalog=CoffeShop;Integrated Security=True;";
 
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
@@ -159,7 +160,7 @@ namespace PresentationLayer
             string query;
             SqlCommand cmd;
 
-            string connectionString = "Data Source=DESKTOP-AHU5FGU;Initial Catalog=CoffeShop;Integrated Security=True;";
+            //string connectionString = "Data Source=DESKTOP-AHU5FGU;Initial Catalog=CoffeShop;Integrated Security=True;";
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
