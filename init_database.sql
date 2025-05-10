@@ -39,3 +39,28 @@ UPDATE [Table]
 SET [status] = 1
 WHERE id = @table_id
 GO
+
+CREATE OR ALTER PROCEDURE SuaCaLam 
+    @workday_name NVARCHAR(20), 
+    @user_name NVARCHAR(50), 
+    @date DATE, 
+    @id INT
+AS
+BEGIN
+    -- Lấy id ca làm
+    DECLARE @workday_id NVARCHAR(10)
+    SELECT @workday_id = id FROM CaLamViec WHERE name = @workday_name
+
+    -- Lấy id nhân viên
+    DECLARE @user_id INT
+    SELECT @user_id = id FROM [User] WHERE name = @user_name
+
+    -- Cập nhật lại phân công ca làm
+    UPDATE PhanCongCaLam
+    SET calam_id = @workday_id,
+        user_id = @user_id,
+        ngayLam = @date
+    WHERE id = @id
+END
+GO
+

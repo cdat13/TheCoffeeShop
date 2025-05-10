@@ -54,5 +54,18 @@ namespace BusinessLayer
                 throw ex;
             }
         }
+
+        public int SuaCaLam(int id, DateTime date, string workday_name, string user_name)
+        {
+            try
+            {
+                return workDayDL.SuaCaLam(id, date, workday_name, user_name);
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
+        }
     }
 }
