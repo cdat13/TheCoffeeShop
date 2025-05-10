@@ -70,7 +70,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flpnl_Table.AutoScroll = true;
             this.flpnl_Table.Location = new System.Drawing.Point(45, 133);
-            this.flpnl_Table.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.flpnl_Table.Margin = new System.Windows.Forms.Padding(2);
             this.flpnl_Table.Name = "flpnl_Table";
             this.flpnl_Table.Size = new System.Drawing.Size(455, 271);
             this.flpnl_Table.TabIndex = 1;
@@ -123,7 +123,7 @@
             // 
             this.btt_ClearTable.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btt_ClearTable.Location = new System.Drawing.Point(16, 682);
-            this.btt_ClearTable.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btt_ClearTable.Margin = new System.Windows.Forms.Padding(2);
             this.btt_ClearTable.Name = "btt_ClearTable";
             this.btt_ClearTable.Size = new System.Drawing.Size(273, 46);
             this.btt_ClearTable.TabIndex = 6;
@@ -185,7 +185,7 @@
             // pic_QR
             // 
             this.pic_QR.Location = new System.Drawing.Point(74, 77);
-            this.pic_QR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pic_QR.Margin = new System.Windows.Forms.Padding(2);
             this.pic_QR.Name = "pic_QR";
             this.pic_QR.Size = new System.Drawing.Size(160, 148);
             this.pic_QR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -208,7 +208,7 @@
             this.pnl_ThongTin.Controls.Add(this.label3);
             this.pnl_ThongTin.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnl_ThongTin.Location = new System.Drawing.Point(524, 0);
-            this.pnl_ThongTin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnl_ThongTin.Margin = new System.Windows.Forms.Padding(2);
             this.pnl_ThongTin.Name = "pnl_ThongTin";
             this.pnl_ThongTin.Size = new System.Drawing.Size(338, 657);
             this.pnl_ThongTin.TabIndex = 9;
@@ -218,7 +218,7 @@
             this.dgv_HoaDon.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgv_HoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_HoaDon.Location = new System.Drawing.Point(16, 358);
-            this.dgv_HoaDon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgv_HoaDon.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_HoaDon.Name = "dgv_HoaDon";
             this.dgv_HoaDon.RowHeadersWidth = 51;
             this.dgv_HoaDon.RowTemplate.Height = 24;
@@ -237,7 +237,7 @@
             this.panel1.Controls.Add(this.flpnl_Table);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(250, 81);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(862, 657);
             this.panel1.TabIndex = 11;
@@ -296,7 +296,7 @@
             this.panel2.Controls.Add(this.Bàn);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(250, 739);
             this.panel2.TabIndex = 11;
@@ -308,19 +308,20 @@
             this.button2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button2.Location = new System.Drawing.Point(28, 167);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(185, 49);
             this.button2.TabIndex = 23;
             this.button2.Text = "Trang chủ";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(250, 153);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -335,7 +336,7 @@
             this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button5.Location = new System.Drawing.Point(18, 349);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(214, 41);
             this.button5.TabIndex = 21;
@@ -350,7 +351,7 @@
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button4.Location = new System.Drawing.Point(18, 414);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(214, 41);
             this.button4.TabIndex = 20;
@@ -365,7 +366,7 @@
             this.Bàn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Bàn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Bàn.Location = new System.Drawing.Point(18, 284);
-            this.Bàn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Bàn.Margin = new System.Windows.Forms.Padding(2);
             this.Bàn.Name = "Bàn";
             this.Bàn.Size = new System.Drawing.Size(214, 41);
             this.Bàn.TabIndex = 19;
@@ -377,7 +378,7 @@
             this.panel3.BackColor = System.Drawing.Color.DimGray;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(250, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(862, 81);
             this.panel3.TabIndex = 11;
@@ -390,7 +391,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Table";
             this.Text = "Table";
             this.Load += new System.EventHandler(this.Table_Load);

@@ -41,5 +41,12 @@ namespace PresentationLayer
             employeeManagement.ShowDialog();
             this.Hide();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            TaoHoaDon taoHoaDon = new TaoHoaDon();
+            taoHoaDon.ShowDialog();
+            this.Hide();
+        }
     }
 }
