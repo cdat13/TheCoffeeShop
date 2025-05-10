@@ -49,7 +49,7 @@ AS
 BEGIN
     -- Lấy id ca làm
     DECLARE @workday_id NVARCHAR(10)
-    SELECT @workday_id = id FROM CaLamViec WHERE name = @workday_name
+    SELECT @workday_id = id_name FROM CaLamViec WHERE name = @workday_name
 
     -- Lấy id nhân viên
     DECLARE @user_id INT

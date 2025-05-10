@@ -13,10 +13,7 @@ namespace DataLayer
     {
         public List<WorkDay> GetWorkDays()
         {
-            string sql = "SELECT PhanCongCaLam.id, CaLamViec.[name], [User].[name], [User].user_role, PhanCongCaLam.ngayLam" +
-                "\r\nFROM CaLamViec" +
-                "\r\nINNER JOIN PhanCongCaLam ON CaLamViec.id = PhanCongCaLam.calam_id" +
-                "\r\nINNER JOIN [User] ON PhanCongCaLam.[user_id] = [User].id";
+            string sql = "SELECT PhanCongCaLam.id, CaLamViec.[name], [User].[name], [User].user_role, PhanCongCaLam.ngayLam\r\nFROM CaLamViec\r\nINNER JOIN PhanCongCaLam ON CaLamViec.id_name = PhanCongCaLam.calam_id\r\nINNER JOIN [User] ON PhanCongCaLam.[user_id] = [User].id";
             string id, workdayName, userName, userRole;
             DateTime workDate;
             List<WorkDay> workDays = new List<WorkDay>();
