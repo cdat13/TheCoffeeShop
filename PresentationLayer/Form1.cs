@@ -7,14 +7,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BusinessLayer;
+using DataTranfer;
 
 namespace PresentationLayer
 {
-    public partial class Form1: Form
+    public partial class Form1 : Form
     {
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            NguyenVatLieu nguyenVatLieu = new NguyenVatLieu();
+            nguyenVatLieu.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -29,24 +41,11 @@ namespace PresentationLayer
             workDay.ShowDialog();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            NguyenVatLieu nguyenVatLieu = new NguyenVatLieu();
-            nguyenVatLieu.ShowDialog();
-        }
-
-        private void Emp_mag_btn_Click(object sender, EventArgs e)
-        {
-            EmployeeManagement employeeManagement = new EmployeeManagement();
-            employeeManagement.ShowDialog();
-            this.Hide();
-        }
-
         private void button4_Click(object sender, EventArgs e)
         {
-            TaoHoaDon taoHoaDon = new TaoHoaDon();
-            taoHoaDon.ShowDialog();
-            this.Hide();
+            SanPham sanpham = new SanPham();
+            sanpham.ShowDialog();
         }
     }
 }
+
